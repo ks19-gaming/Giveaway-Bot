@@ -181,7 +181,7 @@ client.on("message", async message => {
         .setColor("BLUE")
         .setAuthor(`${args.slice(3).join(" ")}`)
         .setDescription(
-          `React with 🎉 to enter!\nTime remaining: ${timespan}\NHosted by: `+message.author.toString()
+          `React with 🎉 to enter!\nTime remaining: ${timespan}\nHosted by: `+message.author.toString()
         )
         .setFooter(`Ends at`, client.user.avatarURL)
         .setTimestamp(time);
@@ -241,10 +241,10 @@ client.on("message", async message => {
           )[0];
         if (moment().isAfter(time)) {
           msg.edit(
-            `** GIVEAWAY ENDED 🎉**`,
+            `**🎉 GIVEAWAY ENDED 🎉**`,
             embed2
               .setTimestamp()
-              .setDescription(`Winners:\n${rusers || "No winners"}`)
+              .setDescription(`Winners:\n${rusers || "No winners"}\nHosted by: `+message.author.toString())
           );
           if (
             msg.reactions
@@ -279,7 +279,7 @@ client.on("message", async message => {
         .then(async m => {
           if (m.author.id != client.user.id)
             return message.channel.send(`This is not a giveaway message.`);
-          if (!m.content.startsWith(`**🎉 GIVEAWAY**`))
+          if (!m.content.startsWith(`**🎉 GIVEAWAY 🎉**`))
             return message.channel.send(`This is not a giveaway message.`);
           if (
             m.content !=
@@ -324,7 +324,7 @@ client.on("message", async message => {
         .then(async m => {
           if (m.author.id != client.user.id)
             return message.channel.send(`This is not a giveaway message.`);
-          if (!m.content.startsWith(`**🎉 GIVEAWAY**`))
+          if (!m.content.startsWith(`**🎉 GIVEAWAY 🎉**`))
             return message.channel.send(`This is not a giveaway message.`);
           if (
             m.content ==
@@ -356,7 +356,7 @@ client.on("message", async message => {
                   `**🎉 GIVEAWAY ENDED 🎉**`,
                   embed2
                     .setTimestamp()
-                    .setDescription(`Winners:\n${rusers || "No winners"}`)
+                    .setDescription(`Winners:\n${rusers || "No winners"}\nHosted by: `+message.author.toString())
                 );
                 if (
                   m.reactions
