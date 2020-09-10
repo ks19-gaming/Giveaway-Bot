@@ -20,7 +20,7 @@ const ms = require('ms');
 const totime = require('to-time');
 const dbg = new Enmap({ name: 'Giveaway' });
 const prefix = '$';
-console.log("[ Giveaways is Lunched. ] - MoJRemGames");
+console.log("[ Giveaways is Lunched. ] - Yashraj");
 
 //////////////////
 
@@ -181,7 +181,7 @@ client.on("message", async message => {
         .setColor("BLUE")
         .setAuthor(`${args.slice(3).join(" ")}`)
         .setDescription(
-          `React with 🎉 to enter!\nTime remaining: ${timespan}`
+          `React with 🎉 to enter!\nTime remaining: ${timespan}\NHosted by: `+message.author.toString()
         )
         .setFooter(`Ends at`, client.user.avatarURL)
         .setTimestamp(time);
@@ -222,7 +222,7 @@ client.on("message", async message => {
                 `**Last chance to enter!!!**\nReact with 🎉\nTime remaining: ${cd(
                   new Date().getTime(),
                   time
-                )}`
+                )}\nHosted by: `+message.author.toString()
               )
           );
         msg.edit(
@@ -231,7 +231,7 @@ client.on("message", async message => {
             `React with 🎉 to enter!\nTime remaining: ${cd(
               new Date().getTime(),
               time
-            )}`
+            )}\nHosted by: `+message.author.toString()
           )
         );
         rusers = msg.reactions
