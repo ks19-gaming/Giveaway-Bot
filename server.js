@@ -279,7 +279,7 @@ client.on("message", async message => {
         .then(async m => {
           if (m.author.id != client.user.id)
             return message.channel.send(`This is not a giveaway message.`);
-          if (!m.content.startsWith(`**🎉 GIVEAWAY 🎉**`))
+          if (!m.content.startsWith(`**🎉 GIVEAWAY ENDED 🎉**`))
             return message.channel.send(`This is not a giveaway message.`);
           if (
             m.content !=
