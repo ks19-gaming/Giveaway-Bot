@@ -219,7 +219,7 @@ client.on("message", async message => {
             embed
               .setColor("#ffb800")
               .setDescription(
-                `**Last chance to enter!!!**\nReact with 🎉\nTime remaining: ${cd(
+                `**Last chance to enter!!!**\nReact with 🎉 to enter!\nTime remaining: ${cd(
                   new Date().getTime(),
                   time
                 )}\nHosted by: `+message.author.toString()
@@ -244,7 +244,7 @@ client.on("message", async message => {
             `**🎉 GIVEAWAY ENDED 🎉**`,
             embed2
               .setTimestamp()
-              .setDescription(`Winners:\n${rusers || "No winners"}\nHosted by: `+message.author.toString())
+              .setDescription(`Winners: ${rusers || "No winners"}\nHosted by: `+message.author.toString())
           );
           if (
             msg.reactions
@@ -356,7 +356,7 @@ client.on("message", async message => {
                   `**🎉 GIVEAWAY ENDED 🎉**`,
                   embed2
                     .setTimestamp()
-                    .setDescription(`Winners:\n${rusers || "No winners"}\nHosted by: `+message.author.toString())
+                    .setDescription(`Winners: ${rusers || "No winners"}\nHosted by: `+message.author.toString())
                 );
                 if (
                   m.reactions
