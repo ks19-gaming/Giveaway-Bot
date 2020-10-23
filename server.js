@@ -388,6 +388,6 @@ client.login(process.env.BOT_TOKEN)
 
 /*
 
-- [       All Copy Right Reserved For: MoJRemGames/MG      ] -
+- [       All Copy Right Reserved For: Yashraj Gaming      ] -
 
 */
